@@ -13,20 +13,11 @@
             font-size: 1.5rem;
             margin-bottom: 1rem;
         }
-        .block-container {
-            display: flex;
-            gap: 10px; /* Промежуток между блоками */
-            justify-content: center; /* Центрирование по горизонтали */
-            margin: 20px 0;
-        }
         .block {
-            height: 60px; /* Высота блока */
             border: 2px solid black;
-            background-color: #a8e6cf; /* Зелёный фон (light green) */
-            flex: 1; /* Равное распределение */
-        }
-        .block-center {
-            flex: 2; /* Центральный блок в 2 раза шире */
+            background-color: #a8e6cf; /* Зелёный */
+            height: 60px;
+            margin: 5px 0;
         }
     </style>
 </head>
@@ -34,24 +25,26 @@
     <!-- Фиолетовая полоса -->
     <div class="header">TEXT</div>
 
-    <!-- Три блока: узкий - широкий - узкий -->
-    <div class="block-container">
-        <div class="block"></div>
-        <div class="block block-center"></div>
-        <div class="block"></div>
-    </div>
+    <!-- Контейнер с сеткой -->
+    <div class="container">
+        <!-- Ряд 1: три колонки -->
+        <div class="row">
+            <div class="col-3 block"></div>
+            <div class="col-6 block"></div>
+            <div class="col-3 block"></div>
+        </div>
 
-    <!-- Дополнительные строки (если нужно больше блоков) -->
-    <div class="block-container">
-        <div class="block" style="flex: 1;"></div>
-        <div class="block" style="flex: 2;"></div>
-        <div class="block" style="flex: 1;"></div>
-    </div>
+        <!-- Ряд 2: один широкий блок -->
+        <div class="row mt-3">
+            <div class="col-12 block"></div>
+        </div>
 
-    <div class="block-container">
-        <div class="block" style="flex: 1;"></div>
-        <div class="block" style="flex: 1;"></div>
-        <div class="block" style="flex: 1;"></div>
+        <!-- Ряд 3: три равных блока -->
+        <div class="row mt-3">
+            <div class="col-4 block"></div>
+            <div class="col-4 block"></div>
+            <div class="col-4 block"></div>
+        </div>
     </div>
 </body>
 </html>
